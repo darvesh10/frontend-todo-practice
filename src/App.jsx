@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-         
+          {/* Home page ka route hum agle step mein banayenge */}
         </Routes>
       </main>
     </div>
