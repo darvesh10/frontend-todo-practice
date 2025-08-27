@@ -2,19 +2,31 @@
 
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar'; // Navbar ko import karein
+import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute'; // Ise import karein
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage'; // Ise import karein
 
 function App() {
   return (
     <div>
-      <Navbar /> {/* Navbar ko yahan add karein */}
+      <Navbar />
       <main style={{ padding: '1rem' }}>
         <Routes>
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-          {/* Home page ka route hum agle step mein banayenge */}
+
+          {/* Protected Home Route */}
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            }
+          />
+
         </Routes>
       </main>
     </div>

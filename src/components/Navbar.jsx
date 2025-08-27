@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#eee' }}>
+    <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#eee', color: 'black'}}>
       <div>
         <Link to="/">TodoApp</Link>
       </div>
